@@ -56,6 +56,13 @@ export const getMessages = (limit = 100) => api.get(`/messages?limit=${limit}`)
 export const sendMessage = (content, message_type = 'chat') =>
   api.post('/messages', { content, message_type })
 
+// Interactive session
+export const startSession = () => api.post('/messages/session/start')
+
+export const stopSession = () => api.post('/messages/session/stop')
+
+export const getSessionStatus = () => api.get('/messages/session/status')
+
 // Permissions
 export const getPermissions = (agentId) => api.get(`/permissions/${agentId}`)
 

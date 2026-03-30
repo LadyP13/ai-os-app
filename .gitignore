@@ -1,4 +1,5 @@
 # Environment variables (SECRETS!)
+.env
 config/.env
 
 # Logs (personal data)
